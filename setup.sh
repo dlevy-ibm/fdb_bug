@@ -1,4 +1,4 @@
 vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
-sudo apt-get install git
-vagrant ssh git clone https://github.com/dlevy-ibm/fdb_bug.git
-fdb_bug/fdbappend.sh
+vagrant ssh default -c "sudo apt-get -y install git"
+vagrant ssh default -c "git clone https://github.com/dlevy-ibm/fdb_bug.git"
+vagrant ssh default -c "sudo fdb_bug/fdbappend.sh"
