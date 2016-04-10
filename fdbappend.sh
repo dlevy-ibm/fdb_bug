@@ -8,5 +8,5 @@ PRIVATE_IPS=$(cat ip_list.txt)
 for IP in $PRIVATE_IPS
 do
       echo Adding FDB entry for IP: $IP
-      bridge fdb append 00:00:00:00:00:00 dev vxlan1  dst $IP self permanent
+      sudo bridge fdb append 00:00:00:00:00:00 dev vxlan1  dst $IP self permanent
 done
